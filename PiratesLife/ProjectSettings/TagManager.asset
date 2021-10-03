@@ -7,6 +7,10 @@ TagManager:
   - Boat
   - debugger
   - debugger1
+  - loop
+  - enemy1
+  - EnemySpawner1
+  - LevelLoader
   layers:
   - Default
   - TransparentFX
@@ -14,10 +18,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - enemy
+  - player
+  - boat
+  - loot
   - 
   - 
   - 
@@ -44,6 +48,12 @@ TagManager:
   - name: background
     uniqueID: 292803009
     locked: 0
+  - name: loot
+    uniqueID: 3217064261
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 2834622559
     locked: 0

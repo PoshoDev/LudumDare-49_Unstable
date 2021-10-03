@@ -16,6 +16,6 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb2d.AddForce(new Vector2(Input.GetAxis("Horizontal")*speed, 0));
+        rb2d.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0));
     }
 }
