@@ -11,6 +11,33 @@ TagManager:
   - enemy1
   - EnemySpawner1
   - LevelLoader
+  - eyes_1
+  - eyes_2
+  - game
+  - diedMenu
+  - pauseMenu
+  - GameDir
+  - pController
+  - gear
+  - cannon
+  - scoreCount
+  - hugger
+  - speed_crate
+  - chest
+  - island
+  - cloud1
+  - cloud2
+  - rain
+  - background
+  - DedSong
+  - musicMan
+  - enemy2
+  - disabler
+  - ui
+  - shopKeep
+  - currentBoxes
+  - currentBoxes1
+  - CurrentBoxes2
   layers:
   - Default
   - TransparentFX
@@ -22,10 +49,10 @@ TagManager:
   - player
   - boat
   - loot
-  - 
-  - 
-  - 
-  - 
+  - cannon
+  - bullet
+  - anchor
+  - background
   - 
   - 
   - 
@@ -45,15 +72,30 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ultra back yall
+    uniqueID: 2768416037
+    locked: 0
   - name: background
     uniqueID: 292803009
     locked: 0
   - name: loot
     uniqueID: 3217064261
     locked: 0
+  - name: box
+    uniqueID: 1160830293
+    locked: 0
+  - name: Legs
+    uniqueID: 2833679633
+    locked: 0
+  - name: cannon
+    uniqueID: 4249775207
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Foreground
     uniqueID: 2834622559
+    locked: 0
+  - name: ultraFront
+    uniqueID: 168271857
     locked: 0

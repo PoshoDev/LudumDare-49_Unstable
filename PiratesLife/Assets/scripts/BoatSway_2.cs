@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.IO;
+using UnityEditor;
 public class BoatSway_2 : MonoBehaviour {
 	public float count_left =  	0f;
 	public float count_right = 	0f;
@@ -10,10 +11,8 @@ public class BoatSway_2 : MonoBehaviour {
 	private float ang = 		0f;
 	public float ang_spd_max = 	0.01f;
 	public float dir_div = 10f;
-	
-    // Start is called before the first frame update
-    void Start() {}
 
+	// Start is called before the first frame update
     // Update is called once per frame
     void Update() {
 		ang = transform.rotation.z;
@@ -37,4 +36,5 @@ public class BoatSway_2 : MonoBehaviour {
 		if (dir < 0) count_left -= dir;
 		else if (dir > 0) count_right += dir;
 	}
+	
 }

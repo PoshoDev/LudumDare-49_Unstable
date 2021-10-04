@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7014199623203637782}
   - component: {fileID: 7014199623203637787}
   - component: {fileID: 396698950}
-  - component: {fileID: 396698952}
   - component: {fileID: 2677958388023242677}
-  m_Layer: 0
+  - component: {fileID: 1935587783}
+  m_Layer: 8
   m_Name: boat
   m_TagString: Boat
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!68 &396698950
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -71,37 +71,29 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.014671981, y: -0.7527824}
-  - {x: -0.08537672, y: -0.737291}
-  - {x: -0.34113953, y: -0.37200785}
-  - {x: -0.36278436, y: -0.2719381}
-  - {x: -0.48149914, y: 0.2139674}
-  - {x: -0.52759707, y: 0.759934}
-  - {x: 0.09311918, y: 0.7736497}
-  - {x: 0.5180745, y: 0.7461207}
-  - {x: 0.4532116, y: 0.13989763}
-  - {x: 0.4532116, y: 0.13989763}
-  - {x: 0.2887839, y: -0.47964907}
-  - {x: 0.14968902, y: -0.7147575}
-  - {x: 0.016074691, y: -0.7594443}
+  - {x: -0.19612712, y: -2.6499758}
+  - {x: -0.6475079, y: -2.739883}
+  - {x: -1.0438037, y: -2.6907988}
+  - {x: -3.3491063, y: -2.1691306}
+  - {x: -6.137445, y: -1.1809719}
+  - {x: -8.210802, y: 0.53016627}
+  - {x: -9.34603, y: 2.6922596}
+  - {x: 0.1282523, y: 2.6357093}
+  - {x: 9.301374, y: 2.7135797}
+  - {x: 7.742327, y: 0.27607632}
+  - {x: 6.0685782, y: -1.3257041}
+  - {x: 4.527925, y: -2.0016172}
+  - {x: 3.0530684, y: -2.3896928}
+  - {x: 2.5571485, y: -2.5413785}
+  - {x: 1.9639392, y: -2.7058914}
+  - {x: 0.6049827, y: -2.6930408}
+  - {x: 0.07942265, y: -2.6822166}
+  - {x: -0.050736785, y: -2.6682868}
+  - {x: -0.15959105, y: -2.6566367}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &396698952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7014199623203637785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee7396f09338a784ea1b60859fd4f820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  maxDisbalance: 0
 --- !u!212 &2677958388023242677
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -152,4 +144,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
+--- !u!114 &1935587783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7014199623203637785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508271626c0082140b2b68c75051af4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count_left: 2
+  count_right: 0
+  ang_inc: 0.0001
+  ang_spd_max: 0.01
+  dir_div: 6
