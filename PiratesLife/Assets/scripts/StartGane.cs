@@ -17,5 +17,9 @@ public class StartGane : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>().loadGameStart();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>().loadGameStart();
+        }
     }
 }
