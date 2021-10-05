@@ -19,7 +19,10 @@ public class Cannon : MonoBehaviour
         cannon = transform.Find("cannon");
         gear = transform.Find("gear");
     }
-
+    private void OnEnable()
+    {
+        Shot = true;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -57,7 +60,6 @@ public class Cannon : MonoBehaviour
     }
     IEnumerator Shoot() 
     {
-        print("noo");
         if (goalObj != null)
         {
             Shot = false;

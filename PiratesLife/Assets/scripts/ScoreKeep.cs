@@ -27,7 +27,7 @@ public class ScoreKeep : MonoBehaviour
             box2 = 1;
             box3 = 1;
             moneyCount = 0;
-            trip = 0;
+            trip = 100;
         }
         if (SceneManager.GetActiveScene().name == ("Store")) 
         {

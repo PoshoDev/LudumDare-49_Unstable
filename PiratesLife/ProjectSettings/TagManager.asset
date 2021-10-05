@@ -38,6 +38,7 @@ TagManager:
   - currentBoxes
   - currentBoxes1
   - CurrentBoxes2
+  - ball
   layers:
   - Default
   - TransparentFX
@@ -53,7 +54,7 @@ TagManager:
   - bullet
   - anchor
   - background
-  - 
+  - watar
   - 
   - 
   - 

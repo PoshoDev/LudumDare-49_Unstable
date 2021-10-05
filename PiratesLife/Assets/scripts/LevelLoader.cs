@@ -28,13 +28,8 @@ public class LevelLoader : MonoBehaviour
     public void loadGameLoop()
     {
 
-        GameObject.FindGameObjectWithTag("disabler").GetComponent<DisableCHildren>().disabled.SetActive(true);
-        Color a = GameObject.FindGameObjectWithTag("background").GetComponent<SpriteRenderer>().color;
-        a.a = 0;
-        GameObject.FindGameObjectWithTag("background").GetComponent<SpriteRenderer>().color = a;
-        GameObject.FindGameObjectWithTag("cloud1").GetComponent<WaterMovemet>().change(true);
-        GameObject.FindGameObjectWithTag("cloud2").GetComponent<WaterMovemet>().change(true);
-        StartCoroutine(LoadGame(3));
+        
+        StartCoroutine(LoadLoopGame());
     }
     public void startMenu()
     {
@@ -55,6 +50,22 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(i);
         
     }
+    IEnumerator LoadLoopGame()
+    {
+        //Play Animation
+        transitionM.SetTrigger("Start");
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        GameObject.FindGameObjectWithTag("disabler").GetComponent<DisableCHildren>().disabled.SetActive(true);
+        Color a = GameObject.FindGameObjectWithTag("background").GetComponent<SpriteRenderer>().color;
+        a.a = 0;
+        GameObject.FindGameObjectWithTag("background").GetComponent<SpriteRenderer>().color = a;
+        GameObject.FindGameObjectWithTag("cloud1").GetComponent<WaterMovemet>().change(true);
+        GameObject.FindGameObjectWithTag("cloud2").GetComponent<WaterMovemet>().change(true);
+        //Wait
+        SceneManager.LoadScene(3);
+
+    }
     IEnumerator LoadMenu()
     {
         //Play Animation
@@ -67,9 +78,9 @@ public class LevelLoader : MonoBehaviour
     {
         //Play Animation
         currentDur += time2Add;
-
         GameObject.FindGameObjectWithTag("Boat").transform.eulerAngles = new Vector3(0, 0, 0);
         GameObject.FindGameObjectWithTag("Player").transform.localPosition = new Vector3(-1273.357f, -218.241f, 767.3306f);
+        GameObject.FindGameObjectWithTag("Player").transform.eulerAngles = new Vector3(0, 0, 0);
         GameObject.FindGameObjectWithTag("GameDir").GetComponent<GameDir>().setTime(currentDur);
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);

@@ -19,7 +19,7 @@ public class StartGane : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>().loadGameStart();
+            Application.Quit();
         }
     }
 }

@@ -7,8 +7,8 @@ public class GameplayMusic : MonoBehaviour
     private AudioSource manager;
     private AudioSource ownManager;
     private AudioSource dManager;
+    private bool playerDied = false;
     private bool loopisplaying = false;
-    private bool playerDied=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,20 +28,19 @@ public class GameplayMusic : MonoBehaviour
             manager.Play();
             loopisplaying = true;
         }
-        if (playerDied && !loopisplaying) 
+    }
+    public void playerDED() 
+    {
+        if (!playerDied) 
         {
-            print("a");
             print("sadgeMusic");
             dManager.volume = ownManager.volume;
             ownManager.Stop();
             manager.Stop();
             dManager.Play();
             loopisplaying = true;
+            playerDied = true;
         }
-    }
-    public void playerDED() 
-    {
-        playerDied = true;
     }
     private void OnEnable()
     {

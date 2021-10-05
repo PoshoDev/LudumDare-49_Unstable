@@ -9,9 +9,12 @@ public class islandMove : MonoBehaviour
     private LevelLoader scrLoader;
     private bool alive = true;
     private Vector3 og;
+    private AudioSource AS;
     // Start is called before the first frame update
     void Awake()
     {
+
+        AS = gameObject.GetComponent<AudioSource>();
         og = gameObject.transform.position;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         scrLoader = (LevelLoader)GameObject.FindGameObjectWithTag("LevelLoader").transform.GetComponent<LevelLoader>();
@@ -31,6 +34,7 @@ public class islandMove : MonoBehaviour
             print(gameObject.tag);
             if (alive) 
             {
+                AS.Play();
                 gameObject.transform.position = og;
                 scrLoader = (LevelLoader)GameObject.FindGameObjectWithTag("LevelLoader").transform.GetComponent<LevelLoader>();
                 scrLoader.startStore();

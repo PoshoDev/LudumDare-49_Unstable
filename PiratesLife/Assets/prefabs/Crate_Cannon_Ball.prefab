@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 8430867916441849296}
   - component: {fileID: 8059349559956235491}
   - component: {fileID: 2236088769956183697}
-  - component: {fileID: 7254174523681335586}
   m_Layer: 11
   m_Name: Crate_Cannon_Ball
-  m_TagString: Untagged
+  m_TagString: ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,6 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   check: 0
+  clank: {fileID: 8300000, guid: a9fc4979be8128f44a733e4bef5a3b71, type: 3}
+  splash: {fileID: 8300000, guid: b4416e4ec653c7441b22d646243c5d78, type: 3}
 --- !u!82 &2236088769956183697
 AudioSource:
   m_ObjectHideFlags: 0
@@ -157,9 +158,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f7143534342b73440b7a47c7191908b4, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.283
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.235
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -243,17 +244,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7254174523681335586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971827347694949119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c56827e1890b22c4b83af8b64e75a047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clank: {fileID: 0}
-  splash: {fileID: 0}

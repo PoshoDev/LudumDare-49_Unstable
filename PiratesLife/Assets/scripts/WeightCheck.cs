@@ -11,6 +11,8 @@ public class WeightCheck : MonoBehaviour {
 	private float aVel;
 	private Rigidbody2D rb2d;
 	private bool Wdisabled = false;
+	public AudioClip clank;
+	public AudioClip splash;
 	
     // Start is called before the first frame update
     void Start() {
@@ -64,8 +66,26 @@ public class WeightCheck : MonoBehaviour {
 			WeightCheck other = (WeightCheck)collision.transform.GetComponent(typeof(WeightCheck));
 			if (other.check) check = true;
 		}
+		if (collision.transform.CompareTag("ball")) 
+		{
+			if (gameObject.CompareTag("ball") || gameObject.CompareTag("enemy2"))
+			{
+				gameObject.GetComponent<AudioSource>().clip = clank;
+				gameObject.GetComponent<AudioSource>().Play();
+			}
+			else 
+			{
+				gameObject.GetComponent<AudioSource>().clip = splash;
+				gameObject.GetComponent<AudioSource>().Play();
+			}
+			
+		}
 	}
-	
+	public void playSplash() 
+	{
+		gameObject.GetComponent<AudioSource>().clip = splash;
+		gameObject.GetComponent<AudioSource>().Play();
+	}
 	private void OnCollisionExit2D(Collision2D collision) {
 		if (collision.transform.CompareTag("Boat"))
 			check = false;

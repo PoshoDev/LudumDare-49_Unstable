@@ -5,7 +5,6 @@ using TMPro;
 public class GameDir : MonoBehaviour
 {
     public float seconds = 1;
-    public int maxEnemies;
     private int moneyCount;
     private TMP_Text Text;
     private TMP_Text Text1;
@@ -34,7 +33,6 @@ public class GameDir : MonoBehaviour
         {
             Destroy(arr[a]);
         }*/
-       
         Text = GameObject.FindGameObjectWithTag("debugger").GetComponent<TMP_Text>();
         Text1 = GameObject.FindGameObjectWithTag("debugger1").GetComponent<TMP_Text>();
         scr1 = (SpawnGoon)GameObject.FindGameObjectWithTag("EnemySpawner1").transform.GetComponent<SpawnGoon>();
@@ -43,7 +41,6 @@ public class GameDir : MonoBehaviour
         remainingTime = GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>().currentDur;
         StartCoroutine(timeToIsland());
         StartCoroutine(Waves());
-        addCrate();
     }
 
     // Update is called once per frame
@@ -54,7 +51,7 @@ public class GameDir : MonoBehaviour
     }
     private IEnumerator Waves() 
     {
-        yield return new WaitForSeconds(seconds / 2);
+        yield return new WaitForSeconds(seconds);
         while (remainingTime > 0) 
         {
                 scr1.Makeenemies();
@@ -90,6 +87,7 @@ public class GameDir : MonoBehaviour
     }
     private void Awake()
     {
+        remainingTime = GameObject.FindGameObjectWithTag("LevelLoader").GetComponent<LevelLoader>().currentDur;
         speedCrates = 0;
         currChestcount = chestCount;
         if (seconds > 1) 
@@ -101,7 +99,7 @@ public class GameDir : MonoBehaviour
     {
         remainingTime = remainingTime - 1 ;
         if (currChestcount != 0)
-            if (Random.Range(0,100)<5&&currChestcount>0)
+            if (Random.Range(0,100)<5 &&currChestcount>0)
             {
                 currChestcount--;
                 gameObject.GetComponent<AudioSource>().Play();
